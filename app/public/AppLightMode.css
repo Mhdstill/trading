@@ -1,0 +1,10 @@
+ /* src/AppDarkMode.css (Mode sombre) */
+ body {
+     background-color: rgb(249, 249, 249);
+     color: #fff;
+ }
+
+ .dark-mode button {
+     background-color: #f8f9fa;
+     color: #333;
+ }
