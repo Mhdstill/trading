@@ -1,60 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React, { useEffect } from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../logo192.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 import LanguageDropdown from './LanguageDropdown';
+import { useTheme } from '..//contexts/ThemeContext'; // Utilisez le hook useTheme pour accéder à isDarkMode et toggleTheme
 
 function Header() {
-    const { t } = useTranslation();
-    const [isDarkMode, setIsDarkMode] = useState(false);
+  const { t } = useTranslation();
+  const { isDarkMode, toggleTheme } = useTheme(); // Utilisez le hook useTheme pour accéder à l'état et à la fonction
 
-    // Fonction pour basculer entre le mode sombre et le mode clair
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
+  useEffect(() => {
+    // Mettez à jour le thème ici (par exemple, ajoutez ou supprimez une classe CSS)
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = isDarkMode ? 'AppDarkMode.css' : 'AppLightMode.css';
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
     };
-
-    // Utilisez useEffect pour charger le fichier CSS en fonction de l'état du thème
-    useEffect(() => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = isDarkMode ? 'AppDarkMode.css' : 'AppLightMode.css';
-
-        // Ajoutez le lien au <head> du document
-        document.head.appendChild(link);
-
-        // Nettoyez le lien précédent lorsque le composant est démonté
-        return () => {
-            document.head.removeChild(link);
-        };
-    }, [isDarkMode]); // Effectuez cette opération lorsque l'état du thème change
+  }, [isDarkMode]);
 
     return (
         <header>
-            <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary py-4">
+            <Navbar expand="lg" className="py-4 bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home"><img src={logo} className="App-logo" alt="logo" height="50" /></Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/">
+                        <img src={logo} className="App-logo" alt="logo" height="50" />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#features">Home</Nav.Link>
-                            <Nav.Link href="#pricing">Dashboard</Nav.Link>
+                        <Nav className='d-flex align-items-center justify-content-center me-auto'>
+                            <Nav.Link as={Link} to="/">{t('home')}</Nav.Link>
+                            <Nav.Link as={Link} to="/dashboard">{t('dashboard')}</Nav.Link>
                         </Nav>
-                        <Nav>
-                            <Nav.Link href="#deets">
-                                <span className='toggle-mode' onClick={toggleTheme}>
-                                    <FontAwesomeIcon icon={faPaintBrush} className='toggle-mode-i' />
-                                    {isDarkMode ? t('darkmode') : t('lightmode')}
-                                </span>
-                            </Nav.Link>
-                            <Nav.Link href="#">
+                        <Nav className='d-flex align-items-center justify-content-center'>
+                            <span onClick={toggleTheme} className='nav-link toggle-mode'>
+                                <FontAwesomeIcon icon={faPaintBrush} className='toggle-mode-i' />
+                                {isDarkMode ? t('darkmode') : t('lightmode')}
+                            </span>
+                            <span className='nav-link'>
+                                <Link to="/register" className='custom-button-outline'>{t('register')}</Link>
+                            </span>
+                            <span className='nav-link'>
+                                <Link to="/signin" className='custom-button'>{t('signin')}</Link>
+                            </span>
+                            <span className='nav-link'>
                                 <LanguageDropdown />
-                            </Nav.Link>
+                            </span>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

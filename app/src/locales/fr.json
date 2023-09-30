@@ -1,4 +1,17 @@
 {
     "darkmode": "Mode Sombre",
-    "lightmode": "Mode Clair"
+    "lightmode": "Mode Clair",
+    "home": "Accueil",
+    "dashboard" : "Dashboard",
+    "register" : "Inscription",
+    "signin": "Connexion",
+    "email": "Email",
+    "password": "Mot de passe",
+
+
+    "register_page": {
+        "title": "Créer un compte"
+    }
+
+
 }

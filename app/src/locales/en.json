@@ -1,4 +1,15 @@
 {
     "darkmode": "Dark Mode",
-    "lightmode": "Light Mode"
+    "lightmode": "Light Mode",
+    "dashboard" : "Dashboard",
+    "home": "Home",
+    "register": "Register",
+    "signin": "Sign in",
+    "email": "Email",
+    "password": "Password",
+
+    "register_page": {
+        "title": "Create an account"
+    }
+    
 }

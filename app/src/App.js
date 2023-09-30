@@ -1,19 +1,38 @@
-import React, { useState, useEffect } from 'react';
+// App.js
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import './Global.css';
 import './Fonts.css';
-import Header from './components/Header';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importez le fichier CSS de Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './pages/Dashboard';
+import { ThemeProvider } from './contexts/ThemeContext'; // Assurez-vous d'importer le ThemeProvider correctement
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
-
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <HomePage />
+    },
+    {
+      path: '/dashboard',
+      element: <Dashboard />
+    },
+    {
+      path: '/register',
+      element: <RegisterPage />
+    },
+    {
+      path: '*',
+      element: <HomePage />
+    }
+  ]);
 
   return (
-    <div className="App">
-      <Header />
-      <h1>Mon Application</h1>
-
-      {/* Le reste de votre contenu */}
-    </div>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 
