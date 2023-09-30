@@ -1,6 +1,4 @@
 import React, { createContext, useState, useEffect } from "react";
-import { logout } from "../utils/dataManager";
-import { callAPI } from "../utils/api";
 
 export const AuthContext = createContext({
     authToken: null,
@@ -52,6 +50,7 @@ const AuthContextProvider = ({ children }) => {
         //   checkTokenValidity();
     }, [authToken, operationToken, userData, module]);
 
+    /*
     const checkTokenValidity = async () => {
         if (authToken) {
             try {
@@ -60,10 +59,10 @@ const AuthContextProvider = ({ children }) => {
                     throw new Error("Token is expired or invalid");
                 }
             } catch (error) {
-                logout();
+             //   logout();
             }
         }
-    };
+    }; */
 
     return (
         <AuthContext.Provider

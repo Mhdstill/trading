@@ -7,9 +7,13 @@
     "signin": "Sign in",
     "email": "Email",
     "password": "Password",
+    "logout": "Logout",
 
     "register_page": {
         "title": "Create an account"
-    }
+    },
     
+    "login_page": {
+        "title": "Authentication"
+    }
 }

@@ -7,11 +7,14 @@
     "signin": "Connexion",
     "email": "Email",
     "password": "Mot de passe",
-
+    "logout": "Déconnexion",
 
     "register_page": {
         "title": "Créer un compte"
+    },
+    
+    "login_page": {
+        "title": "Connexion"
     }
-
 
 }

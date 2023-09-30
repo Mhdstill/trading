@@ -112,6 +112,7 @@ header .toggle-mode .toggle-mode-i {
     padding: 15px 20px;
     height: 58px;
     text-decoration: none;
+    border: none;
 }
 
 .custom-card-md, .custom-card {

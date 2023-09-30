@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './pages/Dashboard';
 import { ThemeProvider } from './contexts/ThemeContext'; // Assurez-vous d'importer le ThemeProvider correctement
 import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
     {
       path: '/register',
       element: <RegisterPage />
+    },
+    {
+      path: '/login',
+      element: <LoginPage />
     },
     {
       path: '*',

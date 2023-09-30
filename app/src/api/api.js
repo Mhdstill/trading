@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'votre-api-base-url'; // Remplacez par l'URL de votre API
+export const API_BASE_URL = 'https://localhost'; // Remplacez par l'URL de votre API
 
 // Fonction générique pour effectuer des appels API avec fetch
 export const callApi = async (url, method, data) => {
