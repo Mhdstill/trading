@@ -10,7 +10,7 @@ import Tab from '@mui/material/Tab';
 
 function TradersPage() {
     const { t } = useTranslation();
-    const [value, setValue] = useState(2);
+    const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
