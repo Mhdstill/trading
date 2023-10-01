@@ -115,14 +115,114 @@ header .toggle-mode .toggle-mode-i {
     border: none;
 }
 
-.custom-card-md, .custom-card {
+.custom-card-md,
+.custom-card {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 4px 5px 0px, rgba(0, 0, 0, 0.1) 0px 1px 10px 0px;
     border-radius: 12px;
 }
 
 @media (max-width: 768px) {
     .custom-card-md {
-        box-shadow: none; /* Supprime la boîte d'ombre */
-        border-radius: 0; /* Supprime le border-radius */
+        box-shadow: none;
+        /* Supprime la boîte d'ombre */
+        border-radius: 0;
+        /* Supprime le border-radius */
     }
 }
+
+.custom-card-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+}
+
+.hr-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.87);
+    margin-bottom: 3rem;
+}
+
+.h1-subtitle {
+    color: rgba(0, 0, 0, 0.58);
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.action-bar_scroll {
+    overflow-x: scroll;
+}
+
+.action-bar_wrapper {
+    display: inline-flex;
+    align-items: center;
+    min-width: 100%;
+    padding: 18px 32px 3px;
+}
+
+.action-bar_space {
+    flex: 1;
+}
+
+.action-bar_buttons {
+    border-color: rgba(0, 0, 0, 0.87) !important;
+    border-color: #cee1ff;
+    display: inline-flex;
+    white-space: nowrap;
+    vertical-align: top;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    border-right: 0;
+    border-radius: 3px;
+}
+/*
+.action-bar_buttons select {
+    border-color: rgba(0, 0, 0, 0.87) !important;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color .1s ease-out;
+    padding: 0 30px 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 33px;
+    width: 100%;
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.action-bar_buttons option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.action-bar_buttons-item {
+    border-color: rgba(0, 0, 0, 0.87) !important;
+    flex-grow: 1;
+    display: inline-block;
+    vertical-align: top;
+    border-right: solid 1px rgba(0, 0, 0, 0.87);
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+.chevron-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    color: #000;
+    cursor: pointer; 
+    margin-left: 10px;
+} */

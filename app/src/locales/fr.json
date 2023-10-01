@@ -2,12 +2,16 @@
     "darkmode": "Mode Sombre",
     "lightmode": "Mode Clair",
     "home": "Accueil",
+    "traders": "Traders",
     "dashboard" : "Dashboard",
     "register" : "Inscription",
     "signin": "Connexion",
     "email": "Email",
     "password": "Mot de passe",
     "logout": "Déconnexion",
+    "percentWin": "% Victoire",
+    "advice": "Avis",
+    "none": "Aucun",
 
     "register_page": {
         "title": "Créer un compte"
@@ -15,6 +19,11 @@
     
     "login_page": {
         "title": "Connexion"
+    },
+
+    "trader_page" : {
+        "title" : "Liste des Traders",
+        "subtitle" : "Compare l'ensembles des traders. La liste est classé de façon croissante."
     }
 
 }

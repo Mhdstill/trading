@@ -9,12 +9,17 @@ import Dashboard from './pages/Dashboard';
 import { ThemeProvider } from './contexts/ThemeContext'; // Assurez-vous d'importer le ThemeProvider correctement
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import TradersPage from './pages/TradersPage';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <HomePage />
+    },
+    {
+      path: '/traders',
+      element: <TradersPage />
     },
     {
       path: '/dashboard',

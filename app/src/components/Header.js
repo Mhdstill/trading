@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <header>
-      <Navbar expand="lg" className="py-4 bg-body-tertiary">
+      <Navbar expand="lg" className="py-4 bg-white">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img src={logo} className="App-logo" alt="logo" height="50" />
@@ -47,6 +47,7 @@ function Header() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className='d-flex align-items-center justify-content-center me-auto'>
               <Nav.Link as={Link} to="/">{t('home')}</Nav.Link>
+              <Nav.Link as={Link} to="/traders">{t('traders')}</Nav.Link>
               {isAuthenticated && (
                 <Nav.Link as={Link} to="/dashboard">{t('dashboard')}</Nav.Link>
               )}
@@ -55,6 +56,9 @@ function Header() {
               <span onClick={toggleTheme} className='nav-link toggle-mode'>
                 <FontAwesomeIcon icon={faPaintBrush} className='toggle-mode-i' />
                 {isDarkMode ? t('darkmode') : t('lightmode')}
+              </span>
+              <span className='nav-link'>
+                <LanguageDropdown />
               </span>
               {!isAuthenticated && (
                 <span className='nav-link'>
@@ -72,9 +76,6 @@ function Header() {
                   </span>
                 </span>
               )}
-              <span className='nav-link'>
-                <LanguageDropdown />
-              </span>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -3,11 +3,15 @@
     "lightmode": "Light Mode",
     "dashboard" : "Dashboard",
     "home": "Home",
+    "traders": "Traders",
     "register": "Register",
     "signin": "Sign in",
     "email": "Email",
     "password": "Password",
     "logout": "Logout",
+    "percentWin": "% Win",
+    "advice": "Advice",
+    "none": "None",
 
     "register_page": {
         "title": "Create an account"
@@ -15,5 +19,10 @@
     
     "login_page": {
         "title": "Authentication"
+    },
+
+    "trader_page" : {
+        "title" : "Traders List",
+        "subtitle" : "Compare all 164 top crypto exchanges. The list is ranked by trading volume."
     }
 }
