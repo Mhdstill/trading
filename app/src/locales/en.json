@@ -12,6 +12,8 @@
     "percentWin": "% Win",
     "advice": "Advice",
     "none": "None",
+    "popular": "Popular",
+    "recent": "Recent",
 
     "register_page": {
         "title": "Create an account"
