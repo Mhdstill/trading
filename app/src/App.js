@@ -10,6 +10,7 @@ import { ThemeProvider } from './contexts/ThemeContext'; // Assurez-vous d'impor
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import TradersPage from './pages/TradersPage';
+import SignalsPage from './pages/SignalsPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ function App() {
     {
       path: '/traders',
       element: <TradersPage />
+    },
+    {
+      path: '/signals',
+      element: <SignalsPage />
     },
     {
       path: '/dashboard',

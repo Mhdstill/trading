@@ -2,7 +2,7 @@
     "darkmode": "Mode Sombre",
     "lightmode": "Mode Clair",
     "home": "Accueil",
-    "traders": "Traders",
+    "traders": "Signaux",
     "dashboard" : "Dashboard",
     "register" : "Inscription",
     "signin": "Connexion",
@@ -13,7 +13,14 @@
     "advice": "Avis",
     "none": "Aucun",
     "popular": "Populaire",
+    "futur": "Futur",
+    "spot": "Spot",
+    "all": "Tous",
     "recent": "Récent",
+    "private": "Privé",
+    "public": "Publique",
+    "name": "Nom",
+    "terms_conditions" : "Termes & Conditions",
 
     "register_page": {
         "title": "Créer un compte"
@@ -26,6 +33,13 @@
     "trader_page" : {
         "title" : "Liste des Traders",
         "subtitle" : "Compare l'ensembles des traders. La liste est classé de façon croissante."
+    },
+
+    "signal_page" : {
+        "title" : "Liste des Signaux",
+        "subtitle" : "Compare all 164 top crypto exchanges. The list is ranked by trading volume.",
+        "text_bg": "Besoin de plus de signaux ?",
+        "subinfo_bg": "Follow other traders"
     }
 
 }

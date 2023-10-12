@@ -41,7 +41,7 @@ header .toggle-mode .toggle-mode-i {
     top: 2px;
 }
 
-.custom-button-outline {
+.custom-button-outline, .custom-button-outline-transparent {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,11 +64,19 @@ header .toggle-mode .toggle-mode-i {
     text-transform: initial;
     cursor: pointer;
     color: black;
+
 }
 
-.custom-button-outline:hover {
+.custom-button-outline:hover,
+.custom-button-outline-transparent:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.custom-button-outline-transparent {
+    background-color: transparent;
+}
+
+
 
 .custom-button {
     display: flex;
@@ -175,13 +183,69 @@ header .toggle-mode .toggle-mode-i {
     border-radius: 3px;
 }
 
-.trading_page .MuiTabs-root {
+#trading_page .MuiTabs-root,
+#signal_page .MuiTabs-root {
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.2) !important;
 }
 
-.trading_page .MuiTabs-root .MuiButtonBase-root {
+#trading_page .MuiTabs-root .MuiButtonBase-root,
+#signal_page .MuiTabs-root .MuiButtonBase-root {
     font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+}
+
+.table-img {
+    max-height: 40px
+}
+
+.table-coin-acron {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.table-coin-acron,
+.table-coin-name {
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.table-coin-name {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-text-long {
+    padding: 15px 0;
+}
+
+.bg-text-long h2 {
+    color: black;
+    font-size: 1.6rem;
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+}
+
+.bg-text-long .sub-info {
+    color: rgba(0,0,0,0.58);
+    font-size: 1.2rem;
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bg-text-long .sub-info-end {
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: SoDoSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(0, 98, 65);
+    text-decoration: underline;
+}
+
+.bg-text-long .custom-button-outline-transparent, .bg-text-long .custom-button {
+    font-size: 1.05rem;
+    width: fit-content;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /*

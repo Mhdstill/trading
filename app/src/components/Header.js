@@ -48,6 +48,7 @@ function Header() {
             <Nav className='d-flex align-items-center justify-content-center me-auto'>
               <Nav.Link as={Link} to="/">{t('home')}</Nav.Link>
               <Nav.Link as={Link} to="/traders">{t('traders')}</Nav.Link>
+              <Nav.Link as={Link} to="/signals">{t('signals')}</Nav.Link>
               {isAuthenticated && (
                 <Nav.Link as={Link} to="/dashboard">{t('dashboard')}</Nav.Link>
               )}

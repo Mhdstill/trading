@@ -4,6 +4,7 @@
     "dashboard" : "Dashboard",
     "home": "Home",
     "traders": "Traders",
+    "signals": "Signals",
     "register": "Register",
     "signin": "Sign in",
     "email": "Email",
@@ -13,7 +14,14 @@
     "advice": "Advice",
     "none": "None",
     "popular": "Popular",
+    "futur": "Futur",
+    "spot": "Spot",
+    "all": "All",
+    "name": "Name",
+    "private": "Private",
+    "public": "Public",
     "recent": "Recent",
+    "terms_conditions" : "Terms & Conditions",
 
     "register_page": {
         "title": "Create an account"
@@ -26,5 +34,12 @@
     "trader_page" : {
         "title" : "Traders List",
         "subtitle" : "Compare all 164 top crypto exchanges. The list is ranked by trading volume."
+    },
+
+    "signal_page" : {
+        "title" : "Signals List",
+        "subtitle" : "Compare all 164 top crypto exchanges. The list is ranked by trading volume.",
+        "text_bg": "Need some signals ?",
+        "subinfo_bg": "Follow other traders"
     }
 }

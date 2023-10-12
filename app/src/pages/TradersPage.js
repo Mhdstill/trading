@@ -20,7 +20,7 @@ function TradersPage() {
         <div>
             <Header />
             <main>
-                <div className='container trading_page'>
+                <div className='container' id='trading_page'>
                     <ActionBar />
 
                     <h1 className='pt-5 pb-4 text-center m-0'> {t('trader_page.title')} </h1>
